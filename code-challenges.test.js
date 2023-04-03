@@ -148,11 +148,13 @@ const studyMinutesWeek2 = {
 //Pseudo code to make it pass
 //Create a function for studyMinutesArranger
 // Use sort to sort the objects into an array from least to greatest.
-const studyMinutesArranger=(studyMinutesWeek1||studyMinutesWeek2) => {
-       studyMinutesArranger.sort
-      
-}
-console.log(studyMinutesArranger)
+// const studyMinutesArranger=(studyMinutesWeek1||studyMinutesWeek2) =>{
+//        return studyMinutesArranger.sort
+// }
+ const studyMinutesArranger=(object) => {
+  return object
+ }
+// console.log(studyMinutesArranger)
 
 
 
@@ -224,3 +226,15 @@ const accountTransactions3 = []
 
 // // b) Create the function that makes the test pass.
 
+//Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
+//Pseudo Code
+// Create a function called atAccumulatinSum.
+// Input takes in an array, will be called array.
+// Output returns an array of accumulating sum.
+//Example 
+  input [100, -17, -23, -9]
+  output [100, 83, 60, 51]
+  // 100 - 17= 83 
+  // 83 -23= 60
+  //60-9 = 51
+  
