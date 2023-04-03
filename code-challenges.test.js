@@ -18,6 +18,14 @@
 
 // 
 //1) Create a function that takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.
+describe("fibonacciReturner",()=>{
+  it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.",()=>{
+    const fibLength1 = 6
+    const fibLength2 = 10
+     expect(fibonacciReturner(fibLength1).toEqual(1,1,2,3,5,8))
+     expect(fibonacciReturner(fibLength2).toEqual(1,1,2,3,5,8,13,21,34,55))
+  })
+})
 
 // a) Create a test with expect statements for each of the variables provided.
 // Pseudo Code
@@ -137,8 +145,14 @@ const studyMinutesWeek2 = {
   friday: 15,
   saturday: 65
 }
-
-
+//Pseudo code to make it pass
+//Create a function for studyMinutesArranger
+// Use sort to sort the objects into an array from least to greatest.
+const studyMinutesArranger=(studyMinutesWeek1||studyMinutesWeek2) => {
+       studyMinutesArranger.sort
+      
+}
+console.log(studyMinutesArranger)
 
 
 
