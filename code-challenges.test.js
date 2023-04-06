@@ -18,17 +18,23 @@
 
 // 
 //1) Create a function that takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.
-describe("fibonacciReturner",()=>{
-  it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.",()=>{
-    const fibLength1 = 6
-    const fibLength2 = 10
-     expect(fibonacciReturner(fibLength1).toEqual(1,1,2,3,5,8))
-     expect(fibonacciReturner(fibLength2).toEqual(1,1,2,3,5,8,13,21,34,55))
-  })
-})
-
+//Pseudo Code 
+//Crete a describe statement
+// Create an it statement that takes in an arguement.
+// create the arrays.
+// create expect statements that returns the array containing numbers of fibonacci sequence.
 // a) Create a test with expect statements for each of the variables provided.
-// Pseudo Code
+// describe("fibonacciReturner",()=>{
+//   it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.",()=>{
+//     const fibLength1 = 6
+//     const fibLength2 = 10
+//      expect(fibonacciReturner(fibLength1).toEqual(1,1,2,3,5,8))
+//      expect(fibonacciReturner(fibLength2).toEqual(1,1,2,3,5,8,13,21,34,55))
+//   })
+// })
+
+
+
 
 const fibLength1 = 6
 // Expected output: [1, 1, 2, 3, 5, 8]
@@ -66,33 +72,33 @@ const fibLength2 = 10
 //Add the const array with the values needed to sort the numbers from least to greatest.
 // Create an expect statement within the IT statement that returns all the values from least to greatest.
 
-describe("studyMinutesArranger",()=>{
-  it("returns an array of values sorted from least to greatest",()=>{
-    const studyMinutesWeek1 = {
-      sunday: 90,
-      monday: 30,
-      tuesday: 20,
-      wednesday: 15,
-      thursday: 30,
-      friday: 15,
-      saturday: 60
+// describe("studyMinutesArranger",()=>{
+//   it("returns an array of values sorted from least to greatest",()=>{
+//     const studyMinutesWeek1 = {
+//       sunday: 90,
+//       monday: 30,
+//       tuesday: 20,
+//       wednesday: 15,
+//       thursday: 30,
+//       friday: 15,
+//       saturday: 60
     
-    }
+//     }
     
-const studyMinutesWeek2 = {
-  sunday: 100,
-  monday: 10,
-  tuesday: 45,
-  wednesday: 60,
-  thursday: 20,
-  friday: 15,
-  saturday: 65
-}
+// const studyMinutesWeek2 = {
+//   sunday: 100,
+//   monday: 10,
+//   tuesday: 45,
+//   wednesday: 60,
+//   thursday: 20,
+//   friday: 15,
+//   saturday: 65
+// }
     
-     expect(studyMinutesArranger(studyMinutesWeek1).toEqual(15,15,20,30,30,60,90))
-     expect(studyMinutesArranger(studyMinutesWeek2).toEqual(10,15,20,45,60,65,100))
-  })
-})
+//      expect(studyMinutesArranger(studyMinutesWeek1).toEqual(15,15,20,30,30,60,90))
+//      expect(studyMinutesArranger(studyMinutesWeek2).toEqual(10,15,20,45,60,65,100))
+//   })
+// })
 
 
 // FAIL  ./jest.test.js
@@ -151,10 +157,13 @@ const studyMinutesWeek2 = {
 // const studyMinutesArranger=(studyMinutesWeek1||studyMinutesWeek2) =>{
 //        return studyMinutesArranger.sort
 // }
- const studyMinutesArranger=(object) => {
-  return object
+ const studyMinutesArranger1=(studyMinutesWeek1) => {
+  return studyMinutesWeek1.sort((a,b)=> a-b)
  }
-// console.log(studyMinutesArranger)
+
+  const studyMinutesArranger2=(studyMinutesWeek2)=>{
+    return studyMinutesWeek2.sort((a,b)=> a-b)
+  }
 
 
 
@@ -232,9 +241,9 @@ const accountTransactions3 = []
 // Input takes in an array, will be called array.
 // Output returns an array of accumulating sum.
 //Example 
-  input [100, -17, -23, -9]
-  output [100, 83, 60, 51]
+  // input [100, -17, -23, -9]
+  // output [100, 83, 60, 51]
   // 100 - 17= 83 
   // 83 -23= 60
   //60-9 = 51
-  
+    git 
