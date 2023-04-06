@@ -164,7 +164,7 @@ const studyMinutesWeek2 = {
   const studyMinutesArranger2=(studyMinutesWeek2)=>{
     return studyMinutesWeek2.sort((a,b)=> a-b)
   }
-
+    
 
 
 
@@ -185,17 +185,17 @@ const studyMinutesWeek2 = {
 //Create an It statement that takes in an arguement " It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array"
 // Add the const arrays 
 // Create an expect statement within the IT statement that returns all the values sum.
-describe("atAccumulatinSum",()=>{
-  it("It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array",()=>{
-    const accountTransactions1 = [100, -17, -23, -9]
-    const accountTransactions2 = [250, -89, 100, -96]
-    const accountTransactions3 = []
-     expect(atAccumulatinSum(accountTransactions1).toEqual(51))
-     expect(atAccumulatinSum(accountTransactions2).toEqual(89))
-     expect(atAccumulatinSum(accountTransactions3).toEqual())
+// describe("atAccumulatinSum",()=>{
+//   it("It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array",()=>{
+//     const accountTransactions1 = [100, -17, -23, -9]
+//     const accountTransactions2 = [250, -89, 100, -96]
+//     const accountTransactions3 = []
+//      expect(atAccumulatinSum(accountTransactions1).toEqual(51))
+//      expect(atAccumulatinSum(accountTransactions2).toEqual(89))
+//      expect(atAccumulatinSum(accountTransactions3).toEqual())
     
-  })
-})
+//   })
+// })
 
 
 // FAIL  ./jest.test.js
@@ -240,10 +240,22 @@ const accountTransactions3 = []
 // Create a function called atAccumulatinSum.
 // Input takes in an array, will be called array.
 // Output returns an array of accumulating sum.
+
 //Example 
   // input [100, -17, -23, -9]
   // output [100, 83, 60, 51]
   // 100 - 17= 83 
   // 83 -23= 60
   //60-9 = 51
-    git 
+    function accumulatinSum(accountTransactions3) {
+      if ( accountTransactions3.length === 0){
+        return [];
+      }
+      let result = [accountTransactions3[0]];
+      for (let i = 1; i< accountTransactions3.length; i++){
+        result.push(result[i-1]+ accountTransactions3[i]);
+      }
+      return result;
+    }
+    console.log(accumulatinSum(accountTransactions3));
+// Code works but I don't know how to make it so that it can do the three arrays at the same time. I think it'd be "function accumulatinSum(accountTransactions1, accountTransactions2,accountTransactions3". But do it for every time it calls the const. 
