@@ -24,14 +24,14 @@
 // create the arrays.
 // create expect statements that returns the array containing numbers of fibonacci sequence.
 // a) Create a test with expect statements for each of the variables provided.
-// describe("fibonacciReturner",()=>{
-//   it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.",()=>{
-//     const fibLength1 = 6
-//     const fibLength2 = 10
-//      expect(fibonacciReturner(fibLength1).toEqual(1,1,2,3,5,8))
-//      expect(fibonacciReturner(fibLength2).toEqual(1,1,2,3,5,8,13,21,34,55))
-//   })
-// })
+describe("fibonacciReturner",()=>{
+  it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.",()=>{
+    const fibLength1 = 6
+    const fibLength2 = 10
+     expect(fibonacciReturner(fibLength1).toEqual(1,1,2,3,5,8))
+     expect(fibonacciReturner(fibLength2).toEqual(1,1,2,3,5,8,13,21,34,55))
+  })
+})
 
 
 
@@ -43,13 +43,21 @@ const fibLength2 = 10
 // Expected output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 // b) Create the function that makes the test pass.
+// This code should log an array and loop it to keep adding 2 to the value &  get a fibonacci sequence array.
 
 
-
-
-
-
-
+function fibonacciReturner(fibLength1) {
+    if (fibLength1.length === 0){
+      return [];
+    }
+    let result = [fibLength1[0]];
+    for (let i = 0; i< fibLength1.length; i++){
+      result.push(result[i+2]+ fibLength1[i]);
+    }
+    return result;
+  }
+    
+  console.log(fibonacciReturner(fibLength1));
 
 
 
@@ -72,33 +80,33 @@ const fibLength2 = 10
 //Add the const array with the values needed to sort the numbers from least to greatest.
 // Create an expect statement within the IT statement that returns all the values from least to greatest.
 
-// describe("studyMinutesArranger",()=>{
-//   it("returns an array of values sorted from least to greatest",()=>{
-//     const studyMinutesWeek1 = {
-//       sunday: 90,
-//       monday: 30,
-//       tuesday: 20,
-//       wednesday: 15,
-//       thursday: 30,
-//       friday: 15,
-//       saturday: 60
+describe("studyMinutesArranger",()=>{
+  it("returns an array of values sorted from least to greatest",()=>{
+    const studyMinutesWeek1 = {
+      sunday: 90,
+      monday: 30,
+      tuesday: 20,
+      wednesday: 15,
+      thursday: 30,
+      friday: 15,
+      saturday: 60
     
-//     }
+    }
     
-// const studyMinutesWeek2 = {
-//   sunday: 100,
-//   monday: 10,
-//   tuesday: 45,
-//   wednesday: 60,
-//   thursday: 20,
-//   friday: 15,
-//   saturday: 65
-// }
+const studyMinutesWeek2 = {
+  sunday: 100,
+  monday: 10,
+  tuesday: 45,
+  wednesday: 60,
+  thursday: 20,
+  friday: 15,
+  saturday: 65
+}
     
-//      expect(studyMinutesArranger(studyMinutesWeek1).toEqual(15,15,20,30,30,60,90))
-//      expect(studyMinutesArranger(studyMinutesWeek2).toEqual(10,15,20,45,60,65,100))
-//   })
-// })
+     expect(studyMinutesArranger(studyMinutesWeek1).toEqual(15,15,20,30,30,60,90))
+     expect(studyMinutesArranger(studyMinutesWeek2).toEqual(10,15,20,45,60,65,100))
+  })
+})
 
 
 // FAIL  ./jest.test.js
@@ -166,7 +174,8 @@ const studyMinutesWeek2 = {
   }
     
 
-
+console.log(studyMinutesArranger1(studyMinutesWeek1));
+console.log(studyMinutesArranger2(studyMinutesWeek2));
 
 
 
@@ -185,17 +194,17 @@ const studyMinutesWeek2 = {
 //Create an It statement that takes in an arguement " It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array"
 // Add the const arrays 
 // Create an expect statement within the IT statement that returns all the values sum.
-// describe("atAccumulatinSum",()=>{
-//   it("It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array",()=>{
-//     const accountTransactions1 = [100, -17, -23, -9]
-//     const accountTransactions2 = [250, -89, 100, -96]
-//     const accountTransactions3 = []
-//      expect(atAccumulatinSum(accountTransactions1).toEqual(51))
-//      expect(atAccumulatinSum(accountTransactions2).toEqual(89))
-//      expect(atAccumulatinSum(accountTransactions3).toEqual())
+describe("atAccumulatinSum",()=>{
+  it("It takes in an array and returns an array of the accumulating sum , if its empty it should return an empty array",()=>{
+    const accountTransactions1 = [100, -17, -23, -9]
+    const accountTransactions2 = [250, -89, 100, -96]
+    const accountTransactions3 = []
+     expect(atAccumulatinSum(accountTransactions1).toEqual(51))
+     expect(atAccumulatinSum(accountTransactions2).toEqual(89))
+     expect(atAccumulatinSum(accountTransactions3).toEqual())
     
-//   })
-// })
+  })
+})
 
 
 // FAIL  ./jest.test.js
